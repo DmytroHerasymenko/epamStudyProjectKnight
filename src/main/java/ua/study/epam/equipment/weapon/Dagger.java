@@ -17,10 +17,4 @@ public class Dagger extends Weapon {
     public String toString() {
         return "dagger " + getName();
     }
-    @Override
-    public boolean equals(Object o){
-        if (o == null) return false;
-        if (!(o instanceof Dagger)) return false;
-        return true;
-    }
 }

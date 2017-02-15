@@ -36,9 +36,13 @@ public class KnightTest {
     @Test
     public void sortEquipmentByWeightTest() throws Exception {
 
-        knight.getEquipment().add(new Boots(Material.SKIN, 1, 60));
+        knight.getEquipment().add(new Helmet(Material.IRON, 7, 100));
         knight.getEquipment().add(new Helmet(Material.IRON, 3, 100));
-        List<Equipment> equip = new ArrayList<Equipment>();
+        knight.getEquipment().add(new Helmet(Material.IRON, 5, 100));
+        knight.getEquipment().add(new Helmet(Material.IRON, 1, 100));
+        knight.getEquipment().add(new Helmet(Material.IRON, 2, 100));
+
+        List<Equipment> equip = new ArrayList<>();
         equip.add(knight.getEquipment().get(3));
         equip.add(knight.getEquipment().get(4));
         equip.add(knight.getEquipment().get(1));
@@ -49,7 +53,7 @@ public class KnightTest {
     }
     @Test
     public void sortEquipmentByWeightEmptyTest() throws Exception {
-        List<Equipment> equip = new ArrayList<Equipment>();
+        List<Equipment> equip = new ArrayList<>();
         knight.sortEquipmentByWeight();
         assertEquals(equip, knight.getEquipment());
     }
@@ -61,12 +65,12 @@ public class KnightTest {
         equip.add(new Helmet(Material.IRON, 3, 70));
         equip.add(new Leggings(Material.SKIN, 1, 50));
 
-        assertEquals(equip,knight.getEquipmentByPrice(50,70));
+        assertEquals(equip,knight.getEquipmentByPrice());
     }
-    @Test
+    /*@Test
     public void getEquipmentByPriceNullTest() throws Exception {
         forge.createFullKnightEquipment(knight);
         List<Equipment> equip = new ArrayList<Equipment>();
-        assertEquals(equip,knight.getEquipmentByPrice(0,0));
-    }
+        assertEquals(equip,knight.getEquipmentByPrice());
+    }*/
 }

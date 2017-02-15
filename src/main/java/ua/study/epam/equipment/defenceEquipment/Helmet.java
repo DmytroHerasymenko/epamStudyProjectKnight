@@ -16,10 +16,4 @@ public class Helmet extends DefenceEquipment {
     public String toString() {
         return "helmet " + getName();
     }
-    @Override
-    public boolean equals(Object o){
-        if (o == null) return false;
-        if (!(o instanceof Helmet)) return false;
-        return true;
-    }
 }

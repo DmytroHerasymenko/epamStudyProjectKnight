@@ -1,27 +1,33 @@
 
-=squid:S1170"!Make this final field static too.(³Í† 8“œ…ö¢+
+=squid:S1170"!Make this final field static too.(ÇğÆÂ8“œ…ö¢+
+9squid:S1700"Rename field "forgeImpl"(¦Ÿİúÿÿÿÿ8´ó¹ä£+
 Bsquid:S1170"!Make this final field static too.(œŒ²¹ıÿÿÿÿ8“œ…ö¢+
-<squid:S1170"!Make this final field static too.(ÿ±c8“œ…ö¢+
-[squid:S1161":Add the "@Override" annotation above this method signature(æ¶ßÊûÿÿÿÿ8«şãŸ£+
-Vsquid:S1161":Add the "@Override" annotation above this method signature(ù†—8«şãŸ£+
-vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(éáŠ™şÿÿÿÿ8«²÷¢+
-qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(áï8ìÖ½ö¢+
-Vsquid:S1161":Add the "@Override" annotation above this method signature( ¬Ì¨8«şãŸ£+
-Usquid:S1161":Add the "@Override" annotation above this method signature(˜óÑ,8«şãŸ£+
-[squid:S1161":Add the "@Override" annotation above this method signature(¢Ñáıÿÿÿÿ8«şãŸ£+
+Vsquid:S1161":Add the "@Override" annotation above this method signature(‘œ±‰8«şãŸ£+
+[
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÆÌü€ÿÿÿÿÿ8å¢¿ì£+
+vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ãÙîğúÿÿÿÿ8‡Ï°÷¢+
+vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ÎßË§úÿÿÿÿ8Ú¬”³£+
 Vsquid:S1161":Add the "@Override" annotation above this method signature(¢Â…í8«şãŸ£+
+qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(•óÀ²8›û²÷¢+
+[squid:S1161":Add the "@Override" annotation above this method signature(¢Ñáıÿÿÿÿ8«şãŸ£+
+Bsquid:S1170"!Make this final field static too.(ã«Êøúÿÿÿÿ8“œ…ö¢+
+Vsquid:S1161":Add the "@Override" annotation above this method signature(Ø‹ò8«şãŸ£+
+vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ÆÇÿÿÿÿÿ8¯›«÷¢+
+Vsquid:S1161":Add the "@Override" annotation above this method signature( ¬Ì¨8«şãŸ£+
+Vsquid:S1161":Add the "@Override" annotation above this method signature(ù†—8«şãŸ£+
+[squid:S1161":Add the "@Override" annotation above this method signature(™áú©úÿÿÿÿ8«şãŸ£+
+[squid:S1161":Add the "@Override" annotation above this method signature(æ¶ßÊûÿÿÿÿ8«şãŸ£+
 Bsquid:S1170"!Make this final field static too.(Øı˜âûÿÿÿÿ8“œ…ö¢+
 vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(à¶¶ôùÿÿÿÿ8Ó¯¯÷¢+
-qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(•óÀ²8›û²÷¢+
-Bsquid:S1170"!Make this final field static too.(æ‘¶‰ıÿÿÿÿ8“œ…ö¢+
-vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ÎßË§úÿÿÿÿ8Ú¬”³£+
-Vsquid:S1161":Add the "@Override" annotation above this method signature(Ø‹ò8«şãŸ£+
-=squid:S1170"!Make this final field static too.(ÇğÆÂ8“œ…ö¢+
-vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(İ×„úüÿÿÿÿ8›Š±÷¢+
-vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ÆÇÿÿÿÿÿ8¯›«÷¢+
+Usquid:S1161":Add the "@Override" annotation above this method signature(˜óÑ,8«şãŸ£+
+=squid:S1170"!Make this final field static too.(³Í† 8“œ…ö¢+
 qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(éë®¤8¾“°÷¢+
-[squid:S1161":Add the "@Override" annotation above this method signature(™áú©úÿÿÿÿ8«şãŸ£+
+vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(İ×„úüÿÿÿÿ8›Š±÷¢+
 Bsquid:S1170"!Make this final field static too.(ÊÉ™Üÿÿÿÿÿ8“œ…ö¢+
-vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ãÙîğúÿÿÿÿ8‡Ï°÷¢+
-Vsquid:S1161":Add the "@Override" annotation above this method signature(‘œ±‰8«şãŸ£+
-Bsquid:S1170"!Make this final field static too.(ã«Êøúÿÿÿÿ8“œ…ö¢+
+Bsquid:S1170"!Make this final field static too.(æ‘¶‰ıÿÿÿÿ8“œ…ö¢+
+vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(éáŠ™şÿÿÿÿ8«²÷¢+
+<squid:S1170"!Make this final field static too.(ÿ±c8“œ…ö¢+
+[
+squid:S106";Replace this usage of System.out or System.err by a logger.(óÿ‡­úÿÿÿÿ8¢¯àì£+
+[
+squid:S106";Replace this usage of System.out or System.err by a logger.(­òèúÿÿÿÿ8¢¯àì£+

@@ -1,5 +1,0 @@
-
-ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ñíÒÓúÿÿÿÿ8ÿÆ…·£+
-V
-squid:S106";Replace this usage of System.out or System.err by a logger.(Êî®8·ŒÆ·£+
- squid:S1160"Refactor this method to throw at most one checked exception instead of: java.sql.SQLException, java.lang.ClassNotFoundException(Ö²éøÿÿÿÿ8ÒÜÚ£+
