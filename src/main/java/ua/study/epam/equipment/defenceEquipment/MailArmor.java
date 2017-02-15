@@ -16,10 +16,4 @@ public class MailArmor extends DefenceEquipment {
     public String toString() {
         return "mail-armor " + getName();
     }
-    @Override
-    public boolean equals(Object o){
-        if (o == null) return false;
-        if (!(o instanceof MailArmor)) return false;
-        return true;
-    }
 }

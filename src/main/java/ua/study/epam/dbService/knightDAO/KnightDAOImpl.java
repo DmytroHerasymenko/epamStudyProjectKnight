@@ -22,7 +22,7 @@ public class KnightDAOImpl implements KnightDAO {
 
         String createTableSQL = "CREATE TABLE IF NOT EXISTS knights("
                 + "gender VARCHAR (10) NOT NULL, "
-                + "name VARCHAR (20) NOT NULL, "
+                + "name VARCHAR (50) NOT NULL, "
                 + "age INTEGER NOT NULL, "
                 + "rank VARCHAR (10) NOT NULL, "
                 + "money INTEGER NOT NULL, "
@@ -31,7 +31,6 @@ public class KnightDAOImpl implements KnightDAO {
                 + "PRIMARY KEY (name) " + ")";
 
         executor.executorUpdate(createTableSQL);
-        System.out.println("Table \"knights\" is created!");
     }
 
     public void insertIntoTableKnights(Knight knight) throws SQLException {
@@ -50,14 +49,17 @@ public class KnightDAOImpl implements KnightDAO {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        System.out.println("knight " + knight.getName() + " saved!");
     }
 
     public KnightDTO getKnightByName(String name) throws SQLException{
         return executor.executorQuery("SELECT * FROM knights WHERE name='" + name + "'", result -> {
-            result.next();
+            if(!(result.next())) {
+                return null;
+            } else{
             return new KnightDTO(result.getString(1), result.getString(2), result.getInt(3),
                     result.getString(4), result.getInt(5),
                     result.getInt(6), result.getInt(7));
-        });
+        }});
     }
 }

@@ -40,7 +40,6 @@ public class EquipmentDAOImpl implements EquipmentDAO {
                 + "PRIMARY KEY (name) " + ")";
 
         executor.executorUpdate(createTableSQL);
-        System.out.println("Table \"equipment\" is created!");
     }
 
     public void insertIntoTableEquipment(Knight knight) throws SQLException {

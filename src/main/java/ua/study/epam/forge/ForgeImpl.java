@@ -35,7 +35,10 @@ public class ForgeImpl implements Forge{
         int fullEquipmentPrice = standardDaggerPrice + standardSwordPrice + standardBootsPrice + standardGlovesPrice +
                 standardHelmetPrice + standardLeggingsPrice + standardMailArmorPrice + standardShieldPrice;
 
-        if(fullEquipmentPrice > knight.getMoney()) return false;
+        if(fullEquipmentPrice > knight.getMoney()) {
+            System.out.println("knight hasn't enough money :(");
+            return false;
+        }
 
         createStandardBoots(knight);
         createStandardGloves(knight);
@@ -45,6 +48,9 @@ public class ForgeImpl implements Forge{
         createStandardShield(knight);
         createStandardSword(knight);
         createStandardDagger(knight);
+
+        System.out.println("knight equipment created: ");
+        System.out.println(knight.getEquipment());
 
         return true;
     }

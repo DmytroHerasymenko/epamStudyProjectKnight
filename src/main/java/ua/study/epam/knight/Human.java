@@ -8,7 +8,7 @@ import ua.study.epam.knight.gender.Gender;
 public abstract class Human {
     private final Gender gender;
     private String name;
-    private int age;
+    private final int age;
 
     public Human(Gender gender, String name, int age) {
         this.gender = gender;
@@ -30,9 +30,5 @@ public abstract class Human {
 
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 }

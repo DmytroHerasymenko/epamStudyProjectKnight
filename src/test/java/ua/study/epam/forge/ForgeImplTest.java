@@ -19,35 +19,64 @@ import static org.junit.Assert.*;
 public class ForgeImplTest {
     Knight knight = new Knight(Gender.MALE, "Petro", 25);
     Forge forge = ForgeImpl.instance();
-    List<Equipment> equipment = new ArrayList<Equipment>();
+    List<Equipment> equipment = new ArrayList<>();
 
     @Test
     public void createFullKnightEquipmentTest() throws Exception {
         forge.createFullKnightEquipment(knight);
+        String [] arrayKnight = new String[8];
+        int count = 0;
+        for(Equipment e : knight.getEquipment()){
+            arrayKnight[count] = e.getClass().getSimpleName();
+            count++;
+        }
+
+        String[] arrayTest = new String[8];
         equipment.add(new Boots(Material.SKIN, 1, 100));
         equipment.add(new Gloves(Material.SKIN, 1, 100));
         equipment.add(new Helmet(Material.SKIN, 1, 100));
         equipment.add(new Leggings(Material.SKIN, 1, 100));
         equipment.add(new MailArmor(Material.SKIN, 1, 100));
-
         equipment.add(new Shield(Material.SKIN, 1, 10));
-
         equipment.add(new Sword (Material.IRON, 7, 150));
         equipment.add(new Dagger (Material.IRON, 7, 150));
-        assertEquals(equipment, knight.getEquipment());
+
+        int testCount = 0;
+        for(Equipment e : equipment){
+            arrayTest[testCount] = e.getClass().getSimpleName();
+            testCount++;
+        }
+
+        assertArrayEquals(arrayTest, arrayKnight);
     }
+
     @Test
     public void createFullKnightEquipmentNullTest() throws Exception {
         knight.setMoney(500);
         forge.createFullKnightEquipment(knight);
         assertEquals(equipment, knight.getEquipment());
     }
+    @Test
+    public void createFullKnightEquipmentMoneyTest() throws Exception {
+        forge.createFullKnightEquipment(knight);
+        assertEquals(20, knight.getMoney());
+    }
+
+    @Test
+    public void createFullKnightEquipmentDamageTest() throws Exception {
+        forge.createFullKnightEquipment(knight);
+        assertEquals(80, knight.getDamage());
+    }
+    @Test
+    public void createFullKnightEquipmentDefenceTest() throws Exception {
+        forge.createFullKnightEquipment(knight);
+        assertEquals(85, knight.getDefence());
+    }
 
     @Test
     public void createStandardDaggerTest() throws Exception {
         forge.createStandardDagger(knight);
-        equipment.add(new Dagger(Material.IRON, 7, 150));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Dagger.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardDaggerNullTest() throws Exception {
@@ -60,7 +89,7 @@ public class ForgeImplTest {
     public void createStandardSwordTest() throws Exception {
         forge.createStandardSword(knight);
         equipment.add(new Sword(Material.IRON, 7, 150));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Sword.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardSwordNullTest() throws Exception {
@@ -72,7 +101,7 @@ public class ForgeImplTest {
     public void createStandardBootsTest() throws Exception {
         forge.createStandardBoots(knight);
         equipment.add(new Boots(Material.SKIN, 1, 100));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Boots.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardBootsNullTest() throws Exception {
@@ -84,7 +113,7 @@ public class ForgeImplTest {
     public void createStandardGlovesTest() throws Exception {
         forge.createStandardGloves(knight);
         equipment.add(new Gloves(Material.SKIN, 1, 100));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Gloves.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardGlovesNullTest() throws Exception {
@@ -96,7 +125,7 @@ public class ForgeImplTest {
     public void createStandardHelmetTest() throws Exception {
         forge.createStandardHelmet(knight);
         equipment.add(new Helmet(Material.SKIN, 1, 100));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Helmet.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardHelmetNullTest() throws Exception {
@@ -108,7 +137,7 @@ public class ForgeImplTest {
     public void createStandardLeggingsTest() throws Exception {
         forge.createStandardLeggings(knight);
         equipment.add(new Leggings(Material.SKIN, 1, 100));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Leggings.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardLeggingsNullTest() throws Exception {
@@ -120,7 +149,7 @@ public class ForgeImplTest {
     public void createStandardMailArmorTest() throws Exception {
         forge.createStandardMailArmor(knight);
         equipment.add(new MailArmor(Material.SKIN, 1, 100));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(MailArmor.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardMailArmorNullTest() throws Exception {
@@ -133,7 +162,7 @@ public class ForgeImplTest {
     public void createStandardShieldTest() throws Exception {
         forge.createStandardShield(knight);
         equipment.add(new Shield(Material.SKIN, 1, 100));
-        assertEquals(equipment, knight.getEquipment());
+        assertEquals(Shield.class.getSimpleName(), knight.getEquipment().get(0).getClass().getSimpleName());
     }
     @Test
     public void createStandardShieldNullTest() throws Exception {
@@ -141,5 +170,4 @@ public class ForgeImplTest {
         forge.createStandardShield(knight);
         assertEquals(equipment, knight.getEquipment());
     }
-
 }

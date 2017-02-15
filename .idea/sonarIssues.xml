@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.java">
           <value>
             <set />
@@ -363,6 +368,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/knight/barracks/Barracks.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/knight/barracks/BarracksImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/knight/gender/Gender.java">
           <value>
             <set />
@@ -389,6 +404,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/ua/study/epam/knight/KnightTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/ua/study/epam/knight/barracks/BarracksImplTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../stepikServ/src/test/java/dbService/DBServiceTest.java">
           <value>
             <set />
           </value>

@@ -8,7 +8,7 @@ import java.util.Random;
  * Created by dima on 11.02.17.
  */
 public abstract class Equipment {
-    Random random = new Random();
+    private Random random = new Random();
     private final Material material;
     private final int weight;
     private final int price;

@@ -7,6 +7,8 @@ import ua.study.epam.dbService.knightDAO.KnightDAO;
 import ua.study.epam.dbService.knightDTO.KnightDTO;
 import ua.study.epam.forge.*;
 import ua.study.epam.knight.Knight;
+import ua.study.epam.knight.barracks.Barracks;
+import ua.study.epam.knight.barracks.BarracksImpl;
 import ua.study.epam.knight.gender.Gender;
 
 import java.sql.SQLException;
@@ -24,33 +26,21 @@ public class Logic {
         factory.getEquipmentDAO().createEquipmentTable();
 
         Forge forge = ForgeImpl.instance();
-        //сделать проверку, есть ли уже такой герой
-        System.out.println("Please enter unique knight`s name");
-        String name = scanner.nextLine();
-        Knight knight = new Knight(Gender.MALE, name, 20);
-        System.out.println("knight " + name + " created!");
+        Barracks barracks = BarracksImpl.instance();
+
+        Knight knight = barracks.createKnight(Gender.MALE);
 
         forge.createFullKnightEquipment(knight);
-        System.out.println("knight`s equipment: ");
-        System.out.println(knight.getEquipment());
 
-        System.out.println("total price of knight`s equipment - " + knight.countEquipmentPrice());
+        knight.countEquipmentPrice();
         knight.sortEquipmentByWeight();
-        System.out.println("sort equipment by weight: ");
-        System.out.println(knight.getEquipment());
-
-        System.out.println("For searching equipment within specified price range, please enter min price: ");
-        int minPrice = scanner.nextInt();
-        System.out.println("Now enter max price: ");
-        int maxPrice = scanner.nextInt();
-        System.out.println("knight`s equipment in entered price range (" + minPrice + ", " + maxPrice + "): ");
-        System.out.println(knight.getEquipmentByPrice(minPrice,maxPrice));
+        knight.getEquipmentByPrice();
 
         factory.getKnightDAO().insertIntoTableKnights(knight);
         factory.getEquipmentDAO().insertIntoTableEquipment(knight);
 
         /*KnightDAO knightDAO = factory.getKnightDAO();
-        //loading your knight from date base
+        //loading your kninothingght from date base
         KnightDTO knightDTO = knightDAO.getKnightByName("Dmytro");
         Knight knight1 = knightDTO.loadKnightFromDB();
 

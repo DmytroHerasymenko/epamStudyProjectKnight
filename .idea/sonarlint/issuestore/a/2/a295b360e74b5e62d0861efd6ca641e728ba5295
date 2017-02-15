@@ -1,5 +1,5 @@
 
-qsquid:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(Ý¢êÍýÿÿÿÿ8³ø‹‘£+
 qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(Êôƒ‰8³ø‹‘£+
-qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(Éß·Û8³ø‹‘£+
+qsquid:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(Ý¢êÍýÿÿÿÿ8³ø‹‘£+
 rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÇûÖìýÿÿÿÿ
+qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(Éß·Û8³ø‹‘£+
