@@ -1,9 +1,4 @@
-package ua.study.epam.dbService.daoFactory;
-
-import ua.study.epam.dbService.equipmentDAO.EquipmentDAO;
-import ua.study.epam.dbService.equipmentDAO.EquipmentDAOImpl;
-import ua.study.epam.dbService.knightDAO.KnightDAO;
-import ua.study.epam.dbService.knightDAO.KnightDAOImpl;
+package ua.study.epam.dbService.dao;
 
 import java.sql.*;
 

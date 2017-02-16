@@ -1,6 +1,5 @@
-package ua.study.epam.dbService.knightDAO;
+package ua.study.epam.dbService.dao;
 
-import ua.study.epam.dbService.daoFactory.DAOFactory;
 import ua.study.epam.dbService.knightDTO.KnightDTO;
 import ua.study.epam.dbService.executor.Executor;
 import ua.study.epam.knight.Knight;
@@ -54,12 +53,12 @@ public class KnightDAOImpl implements KnightDAO {
 
     public KnightDTO getKnightByName(String name) throws SQLException{
         return executor.executorQuery("SELECT * FROM knights WHERE name='" + name + "'", result -> {
-            if(!(result.next())) {
-                return null;
-            } else{
+            if(!(result.next())) return null;
+            else{
             return new KnightDTO(result.getString(1), result.getString(2), result.getInt(3),
                     result.getString(4), result.getInt(5),
                     result.getInt(6), result.getInt(7));
-        }});
+            }
+        });
     }
 }

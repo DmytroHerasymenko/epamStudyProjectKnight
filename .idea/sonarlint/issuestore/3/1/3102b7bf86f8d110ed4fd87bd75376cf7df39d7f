@@ -1,5 +1,5 @@
 
 Osquid:S1313".Make this IP "127.0.0.1" address configurable.(ƒæÎ¢ùÿÿÿÿ8ªáú›£+
-‰"squid:ClassVariableVisibilityCheck"VMake connection a static final constant or non-public and provide accessors if needed.(«¸œõ8òàî¶£+
 ysquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(Øà¥„øÿÿÿÿ8Ý®¹ž£+
+‰"squid:ClassVariableVisibilityCheck"VMake connection a static final constant or non-public and provide accessors if needed.(«¸œõ8òàî¶£+
  squid:S1160"Refactor this method to throw at most one checked exception instead of: java.lang.ClassNotFoundException, java.sql.SQLException(¬èù üÿÿÿÿ8ªáú›£+

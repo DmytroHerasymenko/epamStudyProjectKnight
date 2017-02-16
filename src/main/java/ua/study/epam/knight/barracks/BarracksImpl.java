@@ -1,6 +1,6 @@
 package ua.study.epam.knight.barracks;
 
-import ua.study.epam.dbService.daoFactory.DAOFactory;
+import ua.study.epam.dbService.dao.DAOFactory;
 import ua.study.epam.knight.Knight;
 import ua.study.epam.knight.gender.Gender;
 
@@ -27,6 +27,10 @@ public class BarracksImpl implements Barracks {
 
     public Knight createKnight(Gender gender) throws SQLException, ClassNotFoundException {
         System.out.println("Please enter unique knight name: ");
+        while(!scanner.hasNext()){
+            System.out.println("Please enter unique knight name: ");
+            scanner.nextLine();
+        }
         String name = scanner.nextLine();
         if(!(DAOFactory.getInstance().getKnightDAO().getKnightByName(name) == null)){
             System.out.println("knight " + name + " already exists. Try one more time: ");

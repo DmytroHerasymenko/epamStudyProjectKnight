@@ -98,6 +98,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbService/dao/EquipmentDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbService/dao/KnightDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbService/daoFactory/DAOFactory.java">
           <value>
             <set />

@@ -27,12 +27,15 @@ public class KnightDTO {
     }
 
     public Knight loadKnightFromDB(){
-        Knight knight = new Knight(Gender.valueOf(this.getGender()), this.getName(), this.getAge());
-        knight.setRank(Rank.valueOf(this.getRank()));
-        knight.setMoney(this.getMoney());
-        knight.setDefence(this.getDefence());
-        knight.setDamage(this.getDamage());
-        return knight;
+        if(this == null) return null;
+        else {
+            Knight knight = new Knight(Gender.valueOf(this.getGender()), this.getName(), this.getAge());
+            knight.setRank(Rank.valueOf(this.getRank()));
+            knight.setMoney(this.getMoney());
+            knight.setDefence(this.getDefence());
+            knight.setDamage(this.getDamage());
+            return knight;
+        }
     }
 
     public String getGender() {

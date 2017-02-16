@@ -1,6 +1,5 @@
-package ua.study.epam.dbService.equipmentDAO;
+package ua.study.epam.dbService.dao;
 
-import ua.study.epam.dbService.daoFactory.DAOFactory;
 import ua.study.epam.dbService.equipmentDTO.EquipmentDTO;
 import ua.study.epam.dbService.executor.Executor;
 import ua.study.epam.equipment.Equipment;
@@ -81,13 +80,16 @@ public class EquipmentDAOImpl implements EquipmentDAO {
 
     public List<EquipmentDTO> getEquipmentByOwner(String owner) throws SQLException{
         return executor.executorQuery("SELECT * FROM equipment WHERE owner='" + owner + "'", result -> {
-            ArrayList<EquipmentDTO> equipmentDTOS = new ArrayList<>();
-            while(result.next()) {
-                equipmentDTOS.add(new EquipmentDTO(result.getString(1), result.getString(2),
-                        result.getString(3), result.getInt(4), result.getInt(5),
-                        result.getInt(6), result.getInt(7), result.getInt(8), result.getInt(9)));
+            if(!(result.next())) return null;
+            else {
+                ArrayList<EquipmentDTO> equipmentDTOS = new ArrayList<>();
+                while (result.next()) {
+                    equipmentDTOS.add(new EquipmentDTO(result.getString(1), result.getString(2),
+                            result.getString(3), result.getInt(4), result.getInt(5),
+                            result.getInt(6), result.getInt(7), result.getInt(8), result.getInt(9)));
+                }
+                return equipmentDTOS;
             }
-            return equipmentDTOS;
         });
     }
 }
