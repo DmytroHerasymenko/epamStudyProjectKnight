@@ -1,4 +1,4 @@
-package ua.study.epam.dbService.knightDAO;
+package ua.study.epam.dbService.dao;
 
 import ua.study.epam.dbService.knightDTO.KnightDTO;
 import ua.study.epam.knight.Knight;

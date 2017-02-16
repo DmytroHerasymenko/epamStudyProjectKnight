@@ -59,18 +59,8 @@ public class KnightTest {
     }
 
     @Test
-    public void getEquipmentByPriceTest1() throws Exception {
-        forge.createFullKnightEquipment(knight);
-        List<Equipment> equip = new ArrayList<Equipment>();
-        equip.add(new Helmet(Material.IRON, 3, 70));
-        equip.add(new Leggings(Material.SKIN, 1, 50));
-
-        assertEquals(equip,knight.getEquipmentByPrice());
-    }
-    /*@Test
     public void getEquipmentByPriceNullTest() throws Exception {
-        forge.createFullKnightEquipment(knight);
-        List<Equipment> equip = new ArrayList<Equipment>();
-        assertEquals(equip,knight.getEquipmentByPrice());
-    }*/
+        List<Equipment> equip = new ArrayList<>();
+        assertEquals(equip, knight.getEquipmentByPrice());
+    }
 }

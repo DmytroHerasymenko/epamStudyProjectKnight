@@ -15,18 +15,5 @@ import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emp
  * Created by dima on 15.02.17.
  */
 public class BarracksImplTest {
-    Barracks barracks = BarracksImpl.instance();
-
-    @Rule
-    public final TextFromStandardInputStream systemInMock = emptyStandardInputStream();
-
-    @Test
-    public void createKnightTest() throws Exception {
-        /*Knight knight = barracks.createKnight(Gender.MALE);
-        systemInMock.provideLines("Dmytro");
-
-        assertEquals("Dmytro", knight.getName());*/
-
-    }
 
 }

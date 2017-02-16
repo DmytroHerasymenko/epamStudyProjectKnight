@@ -35,26 +35,37 @@ public class EquipmentDTO {
     }
 
     public Equipment loadEquipmentFromDB(){
-        Equipment equipment = null;
-        switch (this.getType()) {
-            case "Dagger": equipment =  new Dagger(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "Sword": equipment = new Sword(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "Boots": equipment = new Boots(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "Gloves": equipment = new Gloves(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "Helmet": equipment = new Helmet(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "Leggings": equipment = new Leggings(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "MailArmor": equipment = new MailArmor(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
-            case "Shield": equipment = new Shield(Material.valueOf(this.getMaterial()),this.getWeight(),this.getPrice());
-                break;
+        if (this == null) return null;
+        else {
+            Equipment equipment = null;
+            switch (this.getType()) {
+                case "Dagger":
+                    equipment = new Dagger(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "Sword":
+                    equipment = new Sword(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "Boots":
+                    equipment = new Boots(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "Gloves":
+                    equipment = new Gloves(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "Helmet":
+                    equipment = new Helmet(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "Leggings":
+                    equipment = new Leggings(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "MailArmor":
+                    equipment = new MailArmor(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+                case "Shield":
+                    equipment = new Shield(Material.valueOf(this.getMaterial()), this.getWeight(), this.getPrice());
+                    break;
+            }
+            return equipment;
         }
-        return equipment;
     }
 
     public String getType() {

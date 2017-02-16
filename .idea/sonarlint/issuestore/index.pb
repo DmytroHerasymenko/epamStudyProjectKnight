@@ -75,3 +75,9 @@ i
 9src/main/java/ua/study/epam/knight/barracks/Barracks.java,b/4/b44e54db38ee642f1766c7905d17d14460fe2ee9
 [
 +src/main/java/ua/study/epam/main/Logic.java,a/e/aeda2764567b7bdd51b913be2dc6bfa0cb5de197
+q
+Asrc/test/java/ua/study/epam/knight/barracks/BarracksImplTest.java,3/b/3bdd9c4b06f988cc1a33d3936df9eaa9dd63e109
+w
+G.idea/libraries/Maven__com_github_stefanbirkner_system_rules_1_16_0.xml,d/7/d7d9b4002e772f9ee8eec7ab5685c3802209e180
+h
+8.idea/libraries/Maven__org_mockito_mockito_all_1_8_4.xml,6/4/649a59181fa2db681c019fc9704970a0cc6e2040
