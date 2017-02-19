@@ -1,6 +1,6 @@
 package ua.study.epam.equipment;
 
-import ua.study.epam.equipment.materialForEquipment.Material;
+import ua.study.epam.equipment.material.Material;
 
 import java.util.Random;
 

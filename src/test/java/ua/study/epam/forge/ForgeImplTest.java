@@ -2,8 +2,8 @@ package ua.study.epam.forge;
 
 import org.junit.Test;
 import ua.study.epam.equipment.Equipment;
-import ua.study.epam.equipment.defenceEquipment.*;
-import ua.study.epam.equipment.materialForEquipment.Material;
+import ua.study.epam.equipment.defenceequipment.*;
+import ua.study.epam.equipment.material.Material;
 import ua.study.epam.equipment.weapon.*;
 import ua.study.epam.knight.gender.Gender;
 import ua.study.epam.knight.Knight;

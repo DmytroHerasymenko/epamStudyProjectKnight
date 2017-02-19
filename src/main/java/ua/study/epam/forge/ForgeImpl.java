@@ -1,7 +1,7 @@
 package ua.study.epam.forge;
 
-import ua.study.epam.equipment.defenceEquipment.*;
-import ua.study.epam.equipment.materialForEquipment.Material;
+import ua.study.epam.equipment.defenceequipment.*;
+import ua.study.epam.equipment.material.Material;
 import ua.study.epam.equipment.weapon.*;
 import ua.study.epam.knight.Knight;
 
@@ -30,13 +30,12 @@ public class ForgeImpl implements Forge{
         }
         return forgeImpl;
     }
-
+    @Override
     public boolean createFullKnightEquipment(Knight knight) {
         int fullEquipmentPrice = standardDaggerPrice + standardSwordPrice + standardBootsPrice + standardGlovesPrice +
                 standardHelmetPrice + standardLeggingsPrice + standardMailArmorPrice + standardShieldPrice;
 
         if(fullEquipmentPrice > knight.getMoney()) {
-            System.out.println("knight hasn't enough money :(");
             return false;
         }
 
@@ -49,12 +48,10 @@ public class ForgeImpl implements Forge{
         createStandardSword(knight);
         createStandardDagger(knight);
 
-        System.out.println("knight equipment created: ");
-        System.out.println(knight.getEquipment());
-
         return true;
     }
 
+    @Override
     public boolean createStandardDagger(Knight knight) {
         if( standardDaggerPrice > knight.getMoney()) return false;
         else {
@@ -65,7 +62,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardSword(Knight knight) {
         if(standardSwordPrice > knight.getMoney()) return false;
         else {
@@ -76,7 +73,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardBoots(Knight knight) {
         if(standardBootsPrice > knight.getMoney()) return false;
         else {
@@ -87,7 +84,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardGloves(Knight knight) {
         if(standardGlovesPrice > knight.getMoney()) return false;
         else {
@@ -98,7 +95,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardHelmet(Knight knight) {
         if(standardHelmetPrice > knight.getMoney()) return false;
         else {
@@ -109,7 +106,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardLeggings(Knight knight) {
         if(standardLeggingsPrice > knight.getMoney()) return false;
         else {
@@ -120,7 +117,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardMailArmor(Knight knight) {
         if(standardMailArmorPrice > knight.getMoney()) return false;
         else {
@@ -131,7 +128,7 @@ public class ForgeImpl implements Forge{
             return true;
         }
     }
-
+    @Override
     public boolean createStandardShield(Knight knight) {
         if(standardShieldPrice > knight.getMoney()) return false;
         else {

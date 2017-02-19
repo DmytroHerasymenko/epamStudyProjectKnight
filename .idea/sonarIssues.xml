@@ -8,7 +8,27 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../authorization/src/main/java/ua/infopulse/dao/ClientDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../authorization/src/main/java/ua/infopulse/dao/DAOFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../authorization/src/main/java/ua/infopulse/service/RegistrationService.java">
           <value>
             <set />
           </value>
@@ -184,6 +204,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbService/knightDTO/KnightDTO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbservice/dao/DAOFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbservice/dao/EquipmentDAOImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/dbservice/dao/KnightDAOImpl.java">
           <value>
             <set />
           </value>
@@ -408,6 +443,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ua/study/epam/main/View.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/ua/study/epam/forge/ForgeImplTest.java">
           <value>
             <set />
@@ -419,6 +459,106 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/ua/study/epam/knight/barracks/BarracksImplTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../fasad/src/main/java/Fasad.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../homework2/src/main/java/task10/Creator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../homework2/src/main/java/task7/BigBang.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../homework2/src/main/java/task8/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../homework2/src/main/java/task9/MyLinkedList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../homework2/src/test/java/task10/CreatorTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../homework2/src/test/java/task7/BigBangTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/ChainOfResponsibility.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/Command.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/Iterator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/IteratorPattern.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/MediatorPattern.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/Memento.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/MementoPattern.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/Observer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/ObserverPattern.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/behavioral/StatePattern.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/structural/Composite.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/structural/Fasade.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../javaCourse/patterns/src/structural/FlyWeight.java">
           <value>
             <set />
           </value>

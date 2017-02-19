@@ -2,8 +2,8 @@ package ua.study.epam.knight;
 
 import org.junit.Test;
 import ua.study.epam.equipment.Equipment;
-import ua.study.epam.equipment.defenceEquipment.*;
-import ua.study.epam.equipment.materialForEquipment.Material;
+import ua.study.epam.equipment.defenceequipment.*;
+import ua.study.epam.equipment.material.Material;
 import ua.study.epam.forge.Forge;
 import ua.study.epam.forge.ForgeImpl;
 import ua.study.epam.knight.gender.Gender;
@@ -33,6 +33,7 @@ public class KnightTest {
     public void countEquipmentPriceNullTest() throws Exception {
         assertEquals(0, knight.countEquipmentPrice());
     }
+
     @Test
     public void sortEquipmentByWeightTest() throws Exception {
 
@@ -61,6 +62,32 @@ public class KnightTest {
     @Test
     public void getEquipmentByPriceNullTest() throws Exception {
         List<Equipment> equip = new ArrayList<>();
-        assertEquals(equip, knight.getEquipmentByPrice());
+        assertEquals(equip, knight.getEquipmentByPrice(20,300));
+    }
+
+    @Test
+    public void getEquipmentByPriceTest() throws Exception {
+        forge.createFullKnightEquipment(knight);
+        List<Equipment> equipmentList = new ArrayList<>();
+        equipmentList.add(knight.getEquipment().get(3));
+        assertEquals(equipmentList, knight.getEquipmentByPrice(40, 50));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getEquipmentByPriceIllegalTest() {
+        forge.createFullKnightEquipment(knight);
+        knight.getEquipmentByPrice(-2,20);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getEquipmentByPriceIllegal1Test() {
+        forge.createFullKnightEquipment(knight);
+        knight.getEquipmentByPrice(100, 99);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getEquipmentByPriceIllegal2Test() {
+        forge.createFullKnightEquipment(knight);
+        knight.getEquipmentByPrice(-30, -20);
     }
 }

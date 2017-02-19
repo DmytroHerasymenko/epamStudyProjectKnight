@@ -1,11 +1,5 @@
 
-Vsquid:S1161":Add the "@Override" annotation above this method signature(Æİ¤Í8±ñğ†¤+
+qsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(Ï­»ã8øÓ²˜¥+
 7squid:S1700"Rename field "barracksImpl"(ìËËü8ÇÙ‹ç£+
-vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ˆìµ¼ıÿÿÿÿ8ğ÷¯ˆ¤+
-Jsquid:S1940")Use the opposite operator ("!=") instead.(¥Â¦„øÿÿÿÿ8Ë¬«Š¤+
-[
-squid:S106";Replace this usage of System.out or System.err by a logger.(ûÇŒŒøÿÿÿÿ8å©ì£+
-V
-squid:S106";Replace this usage of System.out or System.err by a logger.(›…•“8Ì¨ˆ¤+
-V
-squid:S106";Replace this usage of System.out or System.err by a logger.(İßæß8Ë¬«Š¤+
+vsquid:S00122"TAt most one statement is allowed per line, but 2 statements were found on this line.(ËóÑ€øÿÿÿÿ8À¸àƒ¥+
+]squid:S1226"AIntroduce a new variable instead of reusing the parameter "name".(Ï­»ã8øÓ²˜¥+
