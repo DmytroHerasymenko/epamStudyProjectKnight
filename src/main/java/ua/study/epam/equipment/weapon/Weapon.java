@@ -1,7 +1,7 @@
 package ua.study.epam.equipment.weapon;
 
 import ua.study.epam.equipment.Equipment;
-import ua.study.epam.equipment.materialForEquipment.Material;
+import ua.study.epam.equipment.material.Material;
 
 /**
  * Created by dima on 11.02.17.

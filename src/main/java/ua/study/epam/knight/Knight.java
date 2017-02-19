@@ -6,14 +6,13 @@ import ua.study.epam.knight.rank.Rank;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by dima on 11.02.17.
  */
 public class Knight extends Human {
-    private Scanner scanner = new Scanner(System.in);
 
     private final List<Equipment> equipment = new ArrayList<>();
     private Rank rank = Rank.SQUIRE;
@@ -23,6 +22,44 @@ public class Knight extends Human {
 
     public Knight(Gender gender, String name, int age) {
         super(gender, name, age);
+    }
+
+    public int countEquipmentPrice(){
+        if(this.getEquipment().isEmpty()) {
+            return 0;
+        }
+        int equipmentPrice = 0;
+        for (Equipment equip : this.getEquipment()) {
+            equipmentPrice += equip.getPrice();
+        }
+        return equipmentPrice;
+    }
+
+    public void sortEquipmentByWeight(){
+        this.sortByWeight(this.getEquipment());
+    }
+
+    private void sortByWeight(List<Equipment> equipmentList){
+        Collections.sort(equipmentList, Comparator.comparingInt(Equipment::getWeight));
+    }
+
+    public List<Equipment> getEquipmentByPrice(int minPrice, int maxPrice){
+        if(this.getEquipment().isEmpty()){
+            return new ArrayList<>();
+        }
+
+        if(minPrice < 0 || minPrice > maxPrice || maxPrice > Integer.MAX_VALUE){
+            throw new IllegalArgumentException();
+        }
+
+        List<Equipment> equipmentByPrice = new ArrayList<>();
+        for (Equipment equip : this.getEquipment()) {
+            if(equip.getPrice() >= minPrice && equip.getPrice() <= maxPrice){
+                equipmentByPrice.add(equip);
+            }
+        }
+
+        return equipmentByPrice;
     }
 
     public List<Equipment> getEquipment() {
@@ -61,28 +98,13 @@ public class Knight extends Human {
         this.damage += damage;
     }
 
-    public int countEquipmentPrice(){
-        if(this.getEquipment().isEmpty()) {
-            System.out.println("knight hasn't any equipment :(");
-            return 0;
-        }
-        int equipmentPrice = 0;
-        for (Equipment equip : this.getEquipment()) {
-            equipmentPrice += equip.getPrice();
-        }
-        System.out.println("total price of knight equipment - " + equipmentPrice);
-        return equipmentPrice;
+    @Override
+    public String toString() {
+        return rank + " " + getName();
     }
 
-    public void sortEquipmentByWeight(){
-        this.sortByWeight(this.getEquipment());
-        System.out.println("sort equipment by weight: ");
-        System.out.println(this.getEquipment());
-    }
-
-    private void sortByWeight(List<Equipment> equipment){
+    /*private void sortByWeight(List<Equipment> equipment){
         if(equipment.isEmpty()){
-            System.out.println("knight hasn't any equipment :(");
             return;
         }
         int lenght = equipment.size();
@@ -108,56 +130,7 @@ public class Knight extends Human {
         if (entryPoint < lenght){
             sortByWeight(equipment.subList(entryPoint,lenght));
         }
-    }
-
-    public List<Equipment> getEquipmentByPrice(){
-        if(this.getEquipment().isEmpty()){
-            System.out.println("knight hasn't any equipment :(");
-            return new ArrayList<>();
-        }
-
-        System.out.println("For searching equipment within specified price range, please enter min price: ");
-        scannerCheck();
-        int minPrice = scanner.nextInt();
-        System.out.println("Now enter max price: ");
-        scannerCheck();
-        int maxPrice = scanner.nextInt();
-        while(minPrice < 0 || minPrice > maxPrice || maxPrice > Integer.MAX_VALUE){
-            System.out.println("Sorry, the min price may not be less then 0 and may not be more then max price." +
-                    "Max price may not be less then min price and more then " + Integer.MAX_VALUE + ". Try one more time!");
-            System.out.println("enter min price: ");
-            scannerCheck();
-            minPrice = scanner.nextInt();
-            System.out.println("enter max price: ");
-            scannerCheck();
-            maxPrice = scanner.nextInt();
-        }
-
-        List<Equipment> equipmentByPrice = new ArrayList<>();
-        for (Equipment equip : this.getEquipment()) {
-            if(equip.getPrice() >= minPrice && equip.getPrice() <=maxPrice){
-                equipmentByPrice.add(equip);
-            }
-        }
-        if(equipmentByPrice.isEmpty()){
-            System.out.println("knight hasn't any equipment that satisfies current request.");
-        } else {
-            System.out.println("knight equipment in entered price range (" + minPrice + " - " + maxPrice + "): ");
-            System.out.println(equipmentByPrice);
-        }
-
-        return equipmentByPrice;
-    }
-
-    private void scannerCheck(){
-        while(!scanner.hasNextInt()){
-            System.out.println("incorrect symbol. Please enter integer: ");
-            scanner.next();
-        }
-    }
-
-    @Override
-    public String toString() {
-        return rank + " " + getName();
-    }
+    }*/
 }
+
+
